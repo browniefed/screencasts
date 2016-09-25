@@ -17,13 +17,15 @@
 -- Reset with `setValue` function passed into start
 -- tension/friction
 --- defaults tension to 40
---- defaults tension to 7
+--- defaults friction to 7
+--- Lower friction will lead to a bouncier animation, and higher tension will lead to a looser spring causing many bounces.
 
 -- bounciness/speed
 --- Attempt to normalize the effect based upon the distance between start and end values.
 --- In the end is converted to friction and tension
 --- defaults speed to 12
 --- defaults bounciness to 8
+--- Higher bounciness will make it more springy, and a higher speed will make less tension meaning a not as stiff animation.
 
 ** Animate other style properties like color
 -- Colors?
