@@ -1,0 +1,95 @@
+** Init a basic project
+-- Init project
+-- Modify to create a simple square 100 x 100
+-- Use an RGB value so we can eventually show animating colors
+
+** Render non-animated animated components
+-- Show that rendering is just a view and takes a value
+
+** Animated.timing
+-- Show how to animate a component over time
+-- Make it a point that `setState` isn't causing a re-render?
+-- Basic position
+-- Timed fades, or anything with a specific duration
+
+** Animated.spring
+-- Press bounces.
+-- Reset with `setValue` function passed into start
+
+** Animate other style properties like color
+-- Colors?
+-- Rotation? (transform properties)
+-- Scale hidden?
+
+** interpolate (many properties/many screencast possibilities)
+
+** Setting up a pan responder
+-- No animation
+-- Unnatural. Need to show decay
+-- Need to understand dx/dy
+-- setOffset
+-- flattenOffset
+-- Explain why. Animation should start from where the finger was touched. Need to set the offset and reset the offset each time.
+
+** Animated.event
+-- Just a way to traverse a random object and then call `setValue` on an Animated.Value
+-- AnimatedXY
+
+** Animated.decay
+-- Show throwing a square
+-- Drag => release animations, throwing objects, etc (tinder card throwing)
+
+** Animated.add
+- Ability to take 2 animated values and add them together in an animated fashion
+- https://github.com/facebook/react-native/pull/4395
+
+** Animate.multiply
+- Ability to take 2 animated values and multiply them togetherin animated fashion
+- https://github.com/facebook/react-native/pull/4395
+
+** Animated.modulo
+- Mostly rotational animations
+- Spinning a clock hand
+ - Rotational animations like building a spinnable clock - android clock - https://github.com/facebook/react-native/pull/5743
+
+** Animated.delay
+-- Delay animation
+-- Maybe delay it so that if something happens you have time to stop it before the animation kicks off
+-- Just visual effect
+- Used mainly in sequence/parallel/stagger to add timing between other animations
+
+** Animated.sequence
+-- Do one thing then another
+
+** Animated.parallel
+-- Do multipe animations at the same time
+
+** Animated.stagger
+
+** addListener/removeListener
+
+** createAnimatedComponent
+
+** ScrollView onScroll
+
+
+=========
+15??? Animate non-animated properties
+-- Need to come up with something practical
+-- ReactNativeART properties
+
+
+30 ??? Tracking Dynamic Values
+-- Animating to animated values
+-- WHY? Need a practical reason for this
+
+// talk about isInteraction and why you do this
+-- If you use interaction manager your animations will be considered interactions
+-- This allows you to tell RN that it isn't and things like loading indicators won't deadlock
+-- https://github.com/facebook/react-native/pull/3433
+
+** Do them at the same time? -- bad since it builds on the past? Or good?
+-- Use sequence?
+-- Use parallel?
+-- Use both?
+-- Easing?
