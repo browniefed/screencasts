@@ -1,4 +1,6 @@
-## Setting up a basic React Native project
+# Setting up a basic React Native project
+
+### SECTION 1: Getting a project created and running
 
 GOTO: https://facebook.github.io/react-native/
 
@@ -22,9 +24,27 @@ If you are using Android this will require a few more steps to get running which
 
 Lets start by running our React Native project by pressing the Play button.
 
+
+### SECTION 2: Showing off RN features.
+
+There are a lot of features built into React Native. As the screen indicates if you press CMD + D a development menu will open up.
+Lets go ahead and press CMD + D.
+
+We are presented with a lot of options. 
+- Reload will reload the latest JavaScript and restart you at your beginning screen.
+- Debug JS Remotely will open chrome and allow you to debug your JavaScript in the Chrome development tools.
+- Live Reload will automatically trigger a reload when a file is saved.
+- Hot Reloading will refresh the JavaScript but not restart you at the beginning screen.
+- Inspector will allow you to select an element and look at its styling and layout.
+- Perf Monitor will show various performance statistics like memory, and FPS
+
+For typical projects Hot Reloading will work in many cases but can fail in some cases which then a manual reload will be necessary.
+
+### SECTION 3: Editing files
 Open up the `index.ios.js` file in your favorite JavaScript editor. 
 If you are using Android then you will need to open up `index.android.js`. 
 
 The reason there are 2 separate files is because React Native will look for a specific file entry point based upon the platform you are targeting. 
 Giving you the ability to define different behaviors for each platform.
 
+### SECTION 4: Setup square for demo
