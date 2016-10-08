@@ -1,7 +1,11 @@
 # How to create and use an Animated.Value
 
-### SECTION 1: Explain Animated.Value
+### SECTION 1: Explain Animated.Value -- **Needs Work**
 
+`Animated.Value` is a special wrapper around a number.
+In it's basic form it's just a number, however it has a lot of methods that can be used to make many complex animations.
+
+Rendering an `Animated.View` with an `Animated.Value` will always result in the basic number being returned and passed into your style.
 
 
 ### SECTION 2: Explain Animated.View
