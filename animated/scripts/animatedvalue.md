@@ -1,5 +1,25 @@
-## How to create an Animated.Value
+# How to create and use an Animated.Value
 
-When animating a View we need to provide the style as an object, and not define it inside of the `StyleSheet` so that we can control that specific view.
-You can still define styles in your `StyleSheet` and then combine styles in the `style` prop with an array.
+### SECTION 1: Explain Animated.Value
+
+
+
+### SECTION 2: Explain Animated.View
+
+Because we are using Animated.Values we need to use a special helper view that React Native provides us called Animated.View.
+This will intercept Animated.Values and modify the View correctly when an animation is started.
+
+If you accidentally use a View and provide it with an `Animated.Value` your code will not work.
+The basics principle is inside of `Animated.View` it will turn your `Animated.Value` into normal styling.
+When an animation is started it will directly make calls to the native code and give it the new layout styles.
+
+### SECTION 3: Merge Animated.Value and Animated.View together
+
+Typically you would define static styles in your `StyleSheet.create` call.
+However when animating a View we need to provide the style as an object.
+
+This is because the animation will be for the specific instance of the React component that gets created.
+
+React Native is flexible and you can combine styles from your `StyleSheet` and custom animations by using an array.
+Pass in your `StyleSheet` and then your animated style object into the `style` prop.
 

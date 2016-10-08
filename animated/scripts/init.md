@@ -48,3 +48,8 @@ The reason there are 2 separate files is because React Native will look for a sp
 Giving you the ability to define different behaviors for each platform.
 
 ### SECTION 4: Setup square for demo
+
+Lets start by removing a lot of the default code sample project code.
+
+===I DO NOT KNOW IF THIS IS A GOOD APPROACH===
+Should we do a simple square to show stuff off, real world stuff, or both?
