@@ -5,7 +5,7 @@
 `Animated.Value` is a special wrapper around a number.
 In it's basic form it's just a number, however it has a lot of methods that can be used to make many complex animations.
 
-Rendering an `Animated.View` with an `Animated.Value` will always result in the basic number being returned and passed into your style.
+Rendering an `Animated.View` with an `Animated.Value` will always result in the `Animated.Value` resolving to its basic number form and being applied to the style.
 
 
 ### SECTION 2: Explain Animated.View
@@ -26,4 +26,6 @@ This is because the animation will be for the specific instance of the React com
 
 React Native is flexible and you can combine styles from your `StyleSheet` and custom animations by using an array.
 Pass in your `StyleSheet` and then your animated style object into the `style` prop.
+
+### SECTION 4: Show what we mean by basic number
 
