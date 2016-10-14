@@ -3,11 +3,10 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 
 export default class AnimatedBox extends Component {
-  
   render() {
     return (
       <View style={styles.container}>
