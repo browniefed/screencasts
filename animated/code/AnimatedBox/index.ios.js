@@ -12,7 +12,10 @@ export default class AnimatedBox extends Component {
   componentWillMount() {
     this.animatedOpacity = new Animated.Value(1);
 
-    setTimeout(() => this.animatedOpacity.setValue(.2), 1000)
+    Animated.timing(this.animatedOpacity, {
+      toValue: .2,
+      duration: 1000
+    }).start();
   }
   
   render() {
