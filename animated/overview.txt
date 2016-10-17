@@ -1,10 +1,12 @@
+React Native - Basic Animated Course
+
 ** Init a basic project
 -- Init project
--- Modify to create a simple square 100 x 100
--- Use an RGB value so we can eventually show animating colors
 
 ** Render non-animated animated components
+-- Create a simple square 100 x 100
 -- Show that rendering is just a view and takes a value
+-- Use `setValue` to create an update of opacity vlaue
 
 ** Animated.timing
 -- Show how to animate a component over time
@@ -26,13 +28,11 @@
 --- defaults speed to 12
 --- defaults bounciness to 8
 --- Higher bounciness will make it more springy, and a higher speed will make less tension meaning a not as stiff animation.
+-- Show it on opacity, but more effective if done on `scale` properties
 
-** Animate other style properties like color
--- Colors?
--- Rotation? (transform properties)
--- Scale hidden?
-
-** interpolate (many properties/many screencast possibilities)
+** interpolate introduction
+-- Colors
+-- Rotation
 
 ** Setting up a pan responder
 -- No animation
@@ -50,6 +50,8 @@
 -- Show throwing a square
 -- Drag => release animations, throwing objects, etc (tinder card throwing)
 
+
+=== These next 3 aren't basic, but should be screencasted about anyway.
 ** Animated.add
 - Ability to take 2 animated values and add them together in an animated fashion
 - https://github.com/facebook/react-native/pull/4395
@@ -62,6 +64,8 @@
 - Mostly rotational animations
 - Spinning a clock hand
  - Rotational animations like building a spinnable clock - android clock - https://github.com/facebook/react-native/pull/5743
+
+===
 
 ** Animated.delay
 -- Delay animation
@@ -81,17 +85,14 @@
 
 ** createAnimatedComponent
 
-** ScrollView onScroll
--- onScroll we can fade or shrink stuff
-
+** interpolate in depth
+-- This is the major feature driving Animated and all complex animations.
 
 =========
-15??? Animate non-animated properties
--- Need to come up with something practical
--- ReactNativeART properties
 
+Future
 
-30 ??? Tracking Dynamic Values
+racking Dynamic Values
 -- Animating to animated values
 -- WHY? Need a practical reason for this
 
@@ -99,6 +100,10 @@
 -- If you use interaction manager your animations will be considered interactions
 -- This allows you to tell RN that it isn't and things like loading indicators won't deadlock
 -- https://github.com/facebook/react-native/pull/3433
+
+// useNativeDriver
+-- This isn't complete for all Animated calls
+-- ScrollView w/ Animated.Event operates on same tick rather than next
 
 ** Do them at the same time? -- bad since it builds on the past? Or good?
 -- Use sequence?
