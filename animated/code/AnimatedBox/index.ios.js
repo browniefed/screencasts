@@ -4,25 +4,43 @@ import {
   StyleSheet,
   Text,
   View,
-  Animated
+  ActivityIndicator,
+  Image
 } from 'react-native';
 
-export default class AnimatedBox extends Component {
-  
-  componentWillMount() {
-    this.animatedOpacity = new Animated.Value(1);
+export default class Forecast extends Component {
+  constructor(props) {
+    super(props);
 
-    Animated.timing(this.animatedOpacity, {
-      toValue: .2,
-      duration: 1000
-    }).start();
+    this.state = {
+      loading: true,
+    }
+
+    fetch("https://api.darksky.net/forecast/5a7b049e69faff605d4906744cbee929/45.523220,-122.668752")
+      .then((res) => res.json())
+      .then(data => this.setState({ data, loading: false }));
   }
-  
+
   render() {
-    const animatedStyle = { opacity: this.animatedOpacity };
+    if (this.state.loading) {
+      return (
+        <View style={styles.section}>
+          <ActivityIndicator animating size="large" />
+        </View>
+      );
+    }
+
     return (
       <View style={styles.container}>
-        <Animated.View style={[styles.box, animatedStyle]} />
+        <View style={styles.section}>
+          <Image source={require("./sleet.png")} style={styles.image}/>
+          <Text style={styles.header}>{this.state.data.currently.summary}</Text>
+        </View>
+        <View style={[styles.section, styles.lowerSection]}>
+          <Text style={styles.itemText}>Temperature: {this.state.data.currently.temperature}</Text>
+          <Text style={styles.itemText}>Humidity: {this.state.data.currently.humidity}</Text>
+          <Text style={styles.itemText}>Wind Speed: {this.state.data.currently.windSpeed}</Text>
+        </View>
       </View>
     );
   }
@@ -31,14 +49,31 @@ export default class AnimatedBox extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "#333"
   },
-  box: {
-    backgroundColor: "#333",
-    width: 100,
-    height: 100
+  image: {
+    width: 200,
+    height: 200,
+  },  
+  section: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  lowerSection: {
+    flex: 2,
+    justifyContent: "flex-start"
+  },
+  header: {
+    color: "#FFF",
+    fontSize: 22,
+    fontWeight: "bold"
+  },
+  itemText: {
+    color: "#FFF",
+    fontSize: 18,
+    marginVertical: 10,
   }
-});
+})
 
-AppRegistry.registerComponent('AnimatedBox', () => AnimatedBox);
+AppRegistry.registerComponent('AnimatedBox', () => Forecast);

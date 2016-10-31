@@ -1,0 +1,59 @@
+We'll start by importing animated from react native
+
+Next we'll create a styles variable
+We'll create a stylesheet which takes an object and a named style
+we'll call ours container
+then we'll add styles to this container
+and we'll give it the flex 1 property to take up all available space
+the align items style with the property of center
+and justify content style with the property of center as well
+
+then we'll apply our style to our view
+by giving it the style property and passing it styles.container
+
+now we'll add an animated view child
+by opening our view container and then reclosing it
+
+then creating Animated.View tag
+
+We'll create then a style for our animated view called animated
+with the background color of 3's
+A width of 100
+And a height of 100
+
+Then we'll apply to the style to our Animated.View
+
+Refresh our emulator
+and see we now have a square on the screen
+
+Now we'll create a component will mount life cycle method
+Then we'll create an instance variable by typing this.animatedOpacityValue
+Equals
+a new Animated.Value which will create a new instance of an animated Value
+Which takes a starting value which we'll pass in 1
+
+Then we'll create a style variable 
+Which will be an object
+With a opacity style and we'll give it this.animatedOpacityValue
+Which will be our animated value
+ 
+Now we'll apply both styles to our animated view
+by passing in an array
+And the inline style that we've created
+
+We can refresh the emulator and see that it still has an opacity of 1
+
+Now we'll create a component did mount lifecycle method
+and use Animated.timing which is a function
+That takes 2 arguments
+The first is the animated value that we want to animate
+The second is a configuration object
+For animated.timing it has 2 primary options
+The First is ToValue which is the value that we want to animate to
+And we'll pass in .3
+And the second is the duration which we'll pass in 1000 milliseconds
+
+Then we can call start on our animated.timing to start the animation
+
+Now when we refresh our emulator
+You can see animated.timing animated our opacity from 1 to .3 over 1 second   

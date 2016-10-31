@@ -1,0 +1,7 @@
+now we need to create 2 functions to handle the press in
+and press out animations
+
+We'll call ours handlePressIn and handlePress out
+
+To make sure we have everything bound to the proper this scope
+We'll create a constructor, call super, and bind our 2 functions
